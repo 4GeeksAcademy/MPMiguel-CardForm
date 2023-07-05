@@ -11,23 +11,29 @@
 
 
 </head>
-
+<!-- 
+    Arreglar padding bg-light
+    Centrar mensaje alert
+    Arrelgar required class
+    "" Columna inferior
+ -->
 <body>
 
     <div class="container mt-3 border form-control d-flex ">
         <form class="grid ">
             <div class="row">
-                <div class="p-2 mb-3 col-12 bg-light ">
+                <div class="card-heder">
+                 <div class="p-2 mb-3 col-12 bg-light ">
                     <h2>Payment form example</h2>
-                </div>
-                <div class="p-1 mb-3 mx-2 col-12 d-flex flex-fill form-control  bg-danger bg-opacity-25">
+                 </div>
+                 <div class="p-1 mb-3  col-12 border-0 flex-fill alert alert-danger" role="alert">
                     <p>Some fields are missing</p>
+                 </div>
                 </div>
                 <!--Card data inputs  -->
                 <div class="col-5 mb-3 ">
                     <label class="form-label">Card #</label>
-                    <input class="form-control" pattern="[0-9]" required minlength="16" maxlength="16"
-                        placeholder="XXXXXXXXXXXXXXXX" type="text">
+                    <input class="form-control" pattern="[0-9][16]" required minlength="16" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" type="text">
                 </div>
                 <div class="col-3">
                     <label class="form-label">CVC #</label>
@@ -50,7 +56,7 @@
                 <!-- Card, and message-->
                 <div class="col-6   ">
                     <label class="form-label">City </label>
-                    <input class=" form-control" type="number">
+                    <input class=" form-control" type="text">
                 </div>
                 <div class="col-3">
                     <label class="form-label">State</label>
@@ -67,37 +73,31 @@
                 <!-- Card type  -->
                 <p>We accept:</p>
                 <div class="col-6 h-100 ">
-                    <div class="bg-secondary rounded p-1 w-50">
-                        <div class="form-check form-check-inline ms-">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
+                    <div class="bg-secondary rounded p-1  w-50">
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1"><i
                                     class="fa-brands fa-cc-mastercard"></i></label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label" for="inlineRadio2"><i
-                                    class="fa-brands fa-cc-diners-club"></i></label>
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">
+                                <i class="fa-brands fa-cc-diners-club"></i></label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                    value="option2">
-                                <label class="form-check-label" for="inlineRadio3"><i
-                                        class="fa-brands fa-cc-visa"></i></label>
+                                <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                    </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                    value="option2">
-                                <label class="form-check-label" for="inlineRadio3"><i
-                                        class="fa-brands fa-cc-visa"></i></label>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"  value="option4">
+                                <label class="form-check-label" for="inlineRadio4">
+                                    <i class="fa-brands fa-cc-amex"></i>
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
-                    <!-- Iconos -->
-                    <!-- <i class="fa-brands fa-cc-mastercard"></i>
-                <i class="fa-brands fa-cc-diners-club"></i>
-                <i class="fa-brands fa-cc-visa"></i> -->
                     <!-- text -->
                     <div class="col-6">
                         <p>Message</p>
@@ -109,6 +109,7 @@
                         <button class="btn ms-auto mt-3 text-white  bg-secondary">Cancel</button>
                         <button class="btn ms-2 mt-3 text-white bg-primary ">Send</button>
                     </div>
+                </div>
         </form>
     </div>
     <!-- Fontawesome -->

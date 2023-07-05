@@ -15,21 +15,24 @@
 <body>
 
     <div class="container mt-3 border form-control d-flex ">
-        <form class="grid">
+        <form class="grid ">
             <div class="row">
                 <div class="p-2 mb-3 col-12 bg-light ">
                     <h2>Payment form example</h2>
                 </div>
-                <div class="p-1 mb-3 mx-2 col-12 d-flex  form-control  bg-danger bg-opacity-25">
+                <div class="p-1 mb-3 mx-2 col-12 d-flex flex-fill form-control  bg-danger bg-opacity-25">
                     <p>Some fields are missing</p>
                 </div>
                 <!--Card data inputs  -->
                 <div class="col-5 mb-3 ">
                     <label class="form-label">Card #</label>
-                    <input class=" form-control" pattern="number" minlength="16" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" type="text">
+                    <input class="form-control" pattern="[0-9]" required minlength="16" maxlength="16"
+                        placeholder="XXXXXXXXXXXXXXXX" type="text">
                 </div>
                 <div class="col-3">
-                    <label class="form-label">CVC #</label><input class=" form-control" placeholder="0000" type="number">
+                    <label class="form-label">CVC #</label>
+                    <input class=" form-control" pattern="[0-9]" placeholder="000" minlength="3" maxlength="3"
+                        type="text">
                 </div>
                 <div class="col-4">
                     <label class="form-label">Amount</label>
@@ -51,7 +54,7 @@
                 </div>
                 <div class="col-3">
                     <label class="form-label">State</label>
-                    <select class=" form-select"  placeholder="Pick a state" type="text">
+                    <select class=" form-select" placeholder="Pick a state" type="text">
                         <option selected hidden>Pick a state</option>
                         <option value="1">Ohio</option>
                         <option value="2">Fuenlabrada</option>
@@ -62,44 +65,50 @@
                     <label class="form-label">Postal code</label><input class=" form-control " type="number">
                 </div>
                 <!-- Card type  -->
-                <p>We accept:</p> 
-                <div class="col-6 bg-secondary">  
-                    <div class="form-check form-check-inline">    
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">
-                        <i class="fa-brands fa-cc-mastercard"></i>
-                        </label>
+                <p>We accept:</p>
+                <div class="col-6 h-100 ">
+                    <div class="bg-secondary rounded p-1 w-50">
+                        <div class="form-check form-check-inline ms-">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i
+                                    class="fa-brands fa-cc-mastercard"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2"><i
+                                    class="fa-brands fa-cc-diners-club"></i></label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio3"><i
+                                        class="fa-brands fa-cc-visa"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio3"><i
+                                        class="fa-brands fa-cc-visa"></i></label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">
-                        <i class="fa-brands fa-cc-visa"></i>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                        <label class="form-check-label" for="inlineCheckbox3">
-                        <i class="fa-brands fa-cc-diners-club"></i></label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                        <label class="form-check-label" for="inlineCheckbox3">
-                        <i class="fa-brands fa-cc-diners-club"></i>
-                        </label>
-                    </div>
-                </div>            
-                <!-- text -->
-                <div class="col-6">
-                    <p>Message</p>
-                    <input class="p-4 form-control" type="textarea">
-                    <p class="fs-6 fw-lighter">Add any notes here</p>
                 </div>
-                <!-- Cancel y send -->
-                <div class="d-flex bg-light mt-3 col-12">
-                    <button class="btn ms-auto mt-3 text-white  bg-secondary">Cancel</button>
-                    <button class="btn ms-2 mt-3 text-white bg-primary">Send</button>
-                </div>
-                
+                    <!-- Iconos -->
+                    <!-- <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-diners-club"></i>
+                <i class="fa-brands fa-cc-visa"></i> -->
+                    <!-- text -->
+                    <div class="col-6">
+                        <p>Message</p>
+                        <input class="p-4 form-control" type="textarea">
+                        <p class="fs-6 fw-lighter">Add any notes here</p>
+                    </div>
+                    <!-- Cancel y send -->
+                    <div class="d-flex bg-light mt-3 col-12">
+                        <button class="btn ms-auto mt-3 text-white  bg-secondary">Cancel</button>
+                        <button class="btn ms-2 mt-3 text-white bg-primary ">Send</button>
+                    </div>
         </form>
     </div>
     <!-- Fontawesome -->

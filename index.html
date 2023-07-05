@@ -11,68 +11,64 @@
 
 
 </head>
-<!-- 
-    Arreglar padding bg-light
-    Centrar mensaje alert
-    Arrelgar required class
-    "" Columna inferior
- -->
+
 <body>
 
-    <div class="container mt-3 border form-control d-flex ">
-        <form class="grid ">
+    <div class="container mt-3 border rounded  d-flex  ">
+        <form >
             <div class="row">
-                <div class="card-heder">
-                 <div class="p-2 mb-3 col-12 bg-light ">
+                <div class="bg-light  border-bottom">
+                 <div class="col-12 ">
                     <h2>Payment form example</h2>
                  </div>
-                 <div class="p-1 mb-3  col-12 border-0 flex-fill alert alert-danger" role="alert">
-                    <p>Some fields are missing</p>
-                 </div>
+                </div>
+                 <div class="p-1 m-3 col-12 border-0 flex-fill alert alert-danger" role="alert">
+                    <p class="m-3">Some fields are missing</p>
                 </div>
                 <!--Card data inputs  -->
-                <div class="col-5 mb-3 ">
+                <div class="col-12 col-md-5 mb-3 ">
                     <label class="form-label">Card #</label>
-                    <input class="form-control" pattern="[0-9][16]" required minlength="16" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" type="text">
+                    <input class="form-control" required minlength="16" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" type="text">
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <label class="form-label">CVC #</label>
-                    <input class=" form-control" pattern="[0-9]" placeholder="000" minlength="3" maxlength="3"
+                    <input class=" form-control" required  placeholder="000" minlength="3" maxlength="3"
                         type="text">
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <label class="form-label">Amount</label>
-                    <input class=" form-control" placeholder="Amount" type="number">
+                    <input class=" form-control" required placeholder="Amount" type="number">
                 </div>
                 <!-- Name inputs -->
-                <div class="col-6 mb-3">
+                <div class="col-12 col-md-6 mb-3">
                     <label class="form-label">First name</label>
-                    <input class="form-control" type="text">
+                    <input class="form-control" required type="text">
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <label class="form-label">Last name</label>
-                    <input class="form-control" type="text">
+                    <input class="form-control" required type="text">
                 </div>
                 <!-- Card, and message-->
-                <div class="col-6   ">
+                <div class="col-12 col-md-6">
                     <label class="form-label">City </label>
-                    <input class=" form-control" type="text">
+                    <input class=" form-control" required type="text">
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <label class="form-label">State</label>
-                    <select class=" form-select" placeholder="Pick a state" type="text">
+                    <select class=" form-select" required placeholder="Pick a state" type="text">
                         <option selected hidden>Pick a state</option>
                         <option value="1">Ohio</option>
                         <option value="2">Fuenlabrada</option>
                         <option value="3">Vigo</option>
                     </select>
                 </div>
-                <div class="col-3">
-                    <label class="form-label">Postal code</label><input class=" form-control " type="number">
+                <div class="col-12 col-md-3">
+                    <label class="form-label">Postal code</label><input class="form-control" required type="number">
                 </div>
                 <!-- Card type  -->
-                <p>We accept:</p>
-                <div class="col-6 h-100 ">
+                
+                <div class="col-12 col-md-6 h-100 ">
+                    <p class="mt-1">We accept:</p>
                     <div class="bg-secondary rounded p-1  w-50">
                         <div class="form-check form-check-inline ">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
@@ -99,15 +95,15 @@
                     </div>
                 </div>
                     <!-- text -->
-                    <div class="col-6">
-                        <p>Message</p>
+                    <div class="col-12 col-md-6">
+                        <p class="mt-2">Message</p>
                         <input class="p-4 form-control" type="textarea">
-                        <p class="fs-6 fw-lighter">Add any notes here</p>
+                        <p class="fs-6 fw-lighter m-1">Add any notes here</p>
                     </div>
                     <!-- Cancel y send -->
-                    <div class="d-flex bg-light mt-3 col-12">
-                        <button class="btn ms-auto mt-3 text-white  bg-secondary">Cancel</button>
-                        <button class="btn ms-2 mt-3 text-white bg-primary ">Send</button>
+                    <div class="d-flex bg-light mt-3 col-12 card-footer border-top">
+                        <button class="btn mt-2 mb-2 ms-auto text-white bg-secondary">Cancel</button>
+                        <button class="btn mt-2 mb-2 m-3 text-white bg-primary">Send</button>
                     </div>
                 </div>
         </form>
